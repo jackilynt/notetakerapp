@@ -6,9 +6,10 @@ const router = Router();
 // your api routes
 router.get("/notes", (req, res) => {
   // what you could return, replace the  <{ message: "hit" }> with the actual data from db.json
-  fs.readFromSync("./db/db.json").then((data) => res.json(JSON.parse(data)));
 
-  res.status(200).json(`${req.method} request received to get new notes`);
+  let notes = JSON.parse(fs.readFileSync("./db/db.json"));
+
+  res.json(notes);
 });
 
 router.post("./notes", (req, res) => {
@@ -22,9 +23,9 @@ router.post("./notes", (req, res) => {
     text: req.body.text,
   };
   console.log(newNote);
-
+  console.log(data);
   db.push(newNote);
-  fs.writeFileSync("db/db.json", JSON.stringify(db));
+  fs.writeFileSync("./db/db.json", JSON.stringify(db));
   res.json(db);
 });
 
