@@ -28,20 +28,7 @@ router.post("/notes", (req, res) => {
   fs.writeFileSync("./db/db.json", JSON.stringify(db));
   res.json(db);
 });
-// router.delete("/notes", (req, res) => {
-//   let db = fs.readFileSync("./db/db.json");
-//   db = JSON.parse(db);
-
-//   // building the new note
-//   const newNote = {
-//     id: uuidv4(),
-//     title: req.body.title,
-//     text: req.body.text,
-//   };
-//   console.log(newNote);
-
-//   db.push(newNote);
-//   fs.writeFileSync("./db/db.json", JSON.stringify(db));
-//   res.json(db);
-// });
+router.delete("./db/db.json", (req, res) => {
+  let db = JSON.parse(fs.readFileSync("./db/db.json"));
+});
 module.exports = router;
