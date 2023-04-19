@@ -6,12 +6,15 @@ const router = Router();
 // your api routes
 router.get("/notes", (req, res) => {
   // what you could return, replace the  <{ message: "hit" }> with the actual data from db.json
-  fs.readFromFile("./notes").then((data) => res.json(JSON.parse(data)));
+  fs.readFromSync("./db/db.json").then((data) => res.json(JSON.parse(data)));
 
   res.status(200).json(`${req.method} request received to get new notes`);
 });
-router.post("/notes", (req, res) => {
-  console.info(`${req.method} request received to add a new note`);
+
+router.post("./notes", (req, res) => {
+  let db = fs.readFileSync("./db/db.json");
+  db = JSON.parse(db);
+
   // building the new note
   const newNote = {
     id: uuidv4(),
@@ -19,6 +22,10 @@ router.post("/notes", (req, res) => {
     text: req.body.text,
   };
   console.log(newNote);
+
+  db.push(newNote);
+  fs.writeFileSync("db/db.json", JSON.stringify(db));
+  res.json(db);
 });
 
 module.exports = router;
