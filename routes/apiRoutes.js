@@ -12,7 +12,7 @@ router.get("/notes", (req, res) => {
   res.json(notes);
 });
 
-router.post("./notes", (req, res) => {
+router.post("/notes", (req, res) => {
   let db = fs.readFileSync("./db/db.json");
   db = JSON.parse(db);
 
@@ -23,7 +23,7 @@ router.post("./notes", (req, res) => {
     text: req.body.text,
   };
   console.log(newNote);
-  console.log(data);
+
   db.push(newNote);
   fs.writeFileSync("./db/db.json", JSON.stringify(db));
   res.json(db);
