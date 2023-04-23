@@ -28,11 +28,17 @@ router.post("/notes", (req, res) => {
   fs.writeFileSync("./db/db.json", JSON.stringify(db));
   res.json(db);
 });
-router.delete("./db/db.json", (req, res) => {
-  let db = JSON.parse(fs.readFileSync("./db/db.json"));
-  let deleteNotes = db.filter((item) => item.id !== req.params.id);
-
-  fs.writeFileSync("db/db.json", JSON.stringify(deleteNotes));
-  res.json(deleteNotes);
-});
+// router.delete("/notes/:id", (req, res) => {
+//   let db = JSON.parse(fs.readFileSync("./db/db.json"));
+//   let tempdb = []
+//   for(let i =0;i<db.length;i++){
+//     if(db[i].id != req.params.id){
+//         tempdb.push(db[i])
+//     }
+//   }
+//   db = tempdb
+//    fs.writeFileSync("./db/db.json", JSON.stringify(tempdb),function(err)
+//       else(err) throw err;
+//     }
+// );
 module.exports = router;
