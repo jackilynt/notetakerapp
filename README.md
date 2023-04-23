@@ -21,11 +21,12 @@ For users that need to keep track of information using a note taker application.
 ## link To Deployed Application:
 
 Link to Github: https://whowlett13.github.io/Note-Taker.github.io/
+
 Link to Heroku: https://nameless-wildwood-67847.herokuapp.com/
 
 ## ScreenShot of Deployed Application:
 
-Link:
+Link: https://github.com/Whowlett13/Note-Taker.github.io/issues/1#issue-1680052281
 
 ## Built With:
 
