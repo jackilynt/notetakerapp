@@ -41,15 +41,15 @@ body {
   color: #757575;
 }
 
+.list-container {
+  padding-left: 0;
+}
+
 .list-container .card {
   height: calc(100vh - 70px);
   border-bottom: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-}
-
-.list-container {
-  padding-left: 0;
 }
 
 .list-container .list-group,

@@ -1,48 +1,44 @@
-# Note-Taker.github.io
+####### Note Taker Node.js Application by Jackilyn Tan
 
-## Table Of Contents:
+####### Table Of Contents:
+Description
+Installation
+Deployed Application Link
+Screenshots
+Technologies Used
+License
 
-- Description Of Functionality
-- Installation
-- Link to Deployed Application
-- ScreenShot of Deployed Application
-- Built With
-- License
-- Creator
 
-## Description Of Functionality:
+####### Description:
+This repository contains a Note Taker application built using Node.js. The application allows users to create and save notes for future reference, as well as delete existing notes.
 
-For users that need to keep track of information using a note taker application. The user is able to create a new note and save it for future use as well as remove notes with the delete button.
+####### Installation:
 
-## Installation:
+To run the application, follow these steps:
 
--The application will be invoked by using the following command: node server.js in an integrated terminal
+Clone the repository to your local machine.
+Open the integrated terminal in your code editor.
+Run the command node server.js to start the application.
 
-## link To Deployed Application:
+Alternatively, you may clone a skeleton starter code here: https://github.com/coding-boot-camp/miniature-eureka
 
-Link to Github: https://whowlett13.github.io/Note-Taker.github.io/
+####### Deployed Application Link:
+GitHub Repository: Note-Taker
+Heroku Deployment: TBD
 
-Link to Heroku: https://nameless-wildwood-67847.herokuapp.com/
+####### Screenshots:
+Screenshot
 
-## ScreenShot of Deployed Application:
+####### Technologies Used:
+JavaScript
+HTML5
+CSS
+Express.js
+Node.js
+Heroku
 
-Link: https://github.com/Whowlett13/Note-Taker.github.io/issues/1#issue-1680052281
+####### License:
 
-## Built With:
+This project is licensed under the MIT License. See the LICENSE file for details.
 
--Javascript
--HTML5
--CSS
--Express.js
--Node.js
--Heroku
 
-## License:
-
-MIT License
-
-Copyright (c) 2023 Wyatt Howlett
-
-## Creator:
-
-Wyatt Howlett
