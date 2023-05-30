@@ -27,7 +27,7 @@ GitHub Repository: Note-Taker
 Heroku Deployment: TBD
 
 ####### Screenshots:
-Screenshot
+Screenshots of the application are in the assets folder
 
 ####### Technologies Used:
 JavaScript
